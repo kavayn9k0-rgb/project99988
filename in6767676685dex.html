@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Button</title>
+</head>
+<body style="display:flex;justify-content:center;align-items:center;height:100vh;">
+
+<div id="btn" style="
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:gray;
+  cursor:pointer;
+"></div>
+
+<script>
+const btn = document.getElementById("btn");
+
+if (localStorage.getItem("btnClicked") === "true") {
+  btn.style.background = "green";
+}
+
+btn.onclick = function() {
+  localStorage.setItem("btnClicked", "true");
+  btn.style.background = "green";
+
+  window.location.href = "https://sites.google.com/view/salavatguide/%D0%BA%D0%B0%D1%82%D0%B5%D1%80";
+};
+</script>
+
+</body>
+</html>
